@@ -1,0 +1,31 @@
+{
+  "name": "react-chat-realtime",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "start": "webpack-dev-server --open --mode development",
+    "start:live": "webpack-dev-server --open --mode development --liveReload"
+  },
+  "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "7.9.4",
+    "babel-loader": "8.1.0",
+    "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "1.2.1",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.0.2",
+    "graphql": "^15.3.0",
+    "graphql-ws": "^5.16.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "shards-react": "^1.0.3",
+    "subscriptions-transport-ws": "^0.11.0"
+  }
+}
