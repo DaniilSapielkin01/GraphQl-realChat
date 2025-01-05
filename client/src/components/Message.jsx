@@ -5,10 +5,13 @@ import { GET_MESSAGES } from "../api/messages";
 export const Message = ({ user }) => {
   const { data } = useSubscription(GET_MESSAGES);
 
-  if (!data) return null;
+  if (!data) {
+    console.error("-- error --", data);
+    return null;
+  }
 
   return (
-    <>
+    <div>
       {data.messages.map(({ id, user: messageUser, content }) => (
         <div
           key={id}
@@ -47,6 +50,6 @@ export const Message = ({ user }) => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
