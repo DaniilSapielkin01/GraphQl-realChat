@@ -6,7 +6,7 @@ import { POST_MESSAGE } from "../api/messages";
 
 const Chat = () => {
   const [state, setState] = useState({ user: "Jack", content: "" });
-  const [sendMessage, { data }] = useMutation(POST_MESSAGE);
+  const [sendMessage] = useMutation(POST_MESSAGE);
 
   const onSend = () => {
     if (state.content.length > 0) {
